@@ -1,4 +1,4 @@
-export const products = [
+const products = [
     {
         id: 'zRBijf9EHrDQ',
         title: 'IKAAMA - Anillo de luz',
@@ -697,3 +697,4 @@ export const products = [
     // },
     
 ]
+export default products;

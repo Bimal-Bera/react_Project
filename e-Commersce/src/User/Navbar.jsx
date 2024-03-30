@@ -11,13 +11,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <span className="text-white font-bold">Logo</span>
-            {/* Search bar */}
+            {/* Search bar 
             <div className="ml-4 flex items-center">
               <input type="text" placeholder="Search..." className="bg-gray-700 text-white border-none px-4 py-2 rounded-md focus:outline-none" />
               <button className="text-gray-300 hover:text-white focus:outline-none">
-              {/*<SearchIcon className="h-6 w-6 text-gray-300" />*/}
+              {/*<SearchIcon className="h-6 w-6 text-gray-300" />
               </button>
-            </div>
+            </div>*/}
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
