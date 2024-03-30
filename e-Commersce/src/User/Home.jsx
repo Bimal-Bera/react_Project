@@ -1,35 +1,33 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
 import  Display_limit from './Display_limit';
+import { Link } from 'react-router-dom';
+import CountUp from 'react-countup';
 
-export default function Home() {
+ const Home =() => {
   return (
     <div>
-    <div className="bg-gray-100">
-        <div className="flex flex-wrap justify-center">
-
-            <div className="bg-gray-300 mb-5 mr-2 rounded-lg w-1/4 mt-2">
-                <h2 className="text-center text-green-600 font-bold">524,890+</h2>
-                <p className="text-center">ZERO PLASTIC PRODUCTS SOLD</p>
-            </div>
-
-            <div className="bg-gray-300 mb-5 mr-2 rounded-lg w-1/4 mt-2">
-                <h2 className="text-center text-green-500">131,223 kgs</h2>
-                <p className="text-center">PLASTIC POLLUTION PREVENTED</p>
-            </div>
-
-            <div className="bg-gray-300 mb-5 rounded-lg w-1/4 mt-2">
-                <h2 className="text-center text-green-500">34,993 tons</h2>
-                <p className="text-center">CARBON EMISSIONS PREVENTED</p>
-            </div>
-
+    <div className="bg-gray-100 py-8">
+      <div className="flex flex-wrap justify-center">
+        <div className="bg-gray-300 mb-5 mr-2 rounded-lg w-1/4 mt-2 p-4 text-center">
+          <CountUp start={0} end={524890} duration={3} separator="," suffix="+" className="text-green-600 font-bold text-4xl" />
+          <p>ZERO PLASTIC PRODUCTS SOLD</p>
         </div>
+
+        <div className="bg-gray-300 mb-5 mr-2 rounded-lg w-1/4 mt-2 p-4 text-center">
+          <CountUp start={0} end={131223} duration={3} separator="," suffix=" Kgs" className="text-green-600 font-bold text-4xl"/>
+          <p>PLASTIC POLLUTION PREVENTED</p>
+        </div>
+
+        <div className="bg-gray-300 mb-5 rounded-lg w-1/4 mt-2 p-4 text-center">
+          <CountUp start={0} end={34993} duration={3} separator="," suffix=" tons" className="text-green-600 font-bold text-4xl" />
+          <p>CARBON EMISSIONS PREVENTED</p>
+        </div>
+      </div>
     </div>
 
     <div className="bg-gray-200">
         <div className="flex flex-wrap justify-center">
             <div className="mr-2 mt-3 mb-5 rounded-lg">
-                <a href=''>
+                <a to='/cart'>
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/terracotta-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
@@ -99,3 +97,4 @@ export default function Home() {
 
   )
 }
+export default Home;

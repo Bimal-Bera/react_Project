@@ -1,11 +1,11 @@
 import './App.css'
 
 import Navbar from './User/Navbar'
-import Product from './User/Product'
+
 import Footer from './User/Footer'
 import Home from './User/Home'
 import ImageSlider from './User/ImageSlider'
-import Display_limit from './User/Display_limit'
+
 
 function App() {
   const images = [

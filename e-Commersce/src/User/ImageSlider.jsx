@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import CategoryImageSlider from './CategoryImageSlider ';
-
 
 const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,7 +25,7 @@ const ImageSlider = ({ images }) => {
       &gt;
       </button>
       <div className="flex">
-        {images.map((image, index) => (
+        {images && images.length > 0 && images.map((image, index) => (
           <div
             key={index}
             className={`w-full ${index === currentIndex ? 'block' : 'hidden'} transition-opacity duration-500`}
@@ -37,6 +37,10 @@ const ImageSlider = ({ images }) => {
     </div>
     </>
   );
+};
+
+ImageSlider.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired // Define prop type validation
 };
 
 export default ImageSlider;
