@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CategoryImageSlider from './CategoryImageSlider ';
 
 
 const ImageSlider = ({ images }) => {
@@ -13,6 +14,8 @@ const ImageSlider = ({ images }) => {
   };
 
   return (
+    <>
+    <CategoryImageSlider/>
     <div className="relative">
       <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded" onClick={prevSlide}>
       &lt;
@@ -32,6 +35,7 @@ const ImageSlider = ({ images }) => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

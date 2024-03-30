@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import  Display_limit from './Display_limit';
 
 export default function Home() {
   return (
@@ -90,7 +91,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center">
             <p className="font-bold">New on Earth Heaven</p>
 
-
+            <Display_limit/>
         </div>
     </div>
     <br />
