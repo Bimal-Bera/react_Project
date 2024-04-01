@@ -52,6 +52,7 @@ import CountUp from 'react-countup';
                         <img src="src/assets/Images/cork-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
                 </a>
+                
             </div>
 
             <div className="mr-2 mt-3 mb-5 rounded-lg">
