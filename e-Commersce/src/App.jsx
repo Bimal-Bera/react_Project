@@ -1,29 +1,36 @@
 import './App.css'
 
 import Navbar from './User/Navbar'
-
-import Footer from './User/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Productlist from './User/Productlist';
 import Home from './User/Home'
 import ImageSlider from './User/ImageSlider'
+import Footer from './User/Footer';
+import AboutPage from './User/AboutPage';
 
 
 function App() {
-  const images = [
-    "src/assets/Images/image 9.svg",
-    "src/assets/Images/Elephent.svg",
-    "src/assets/Images/image 23.svg",
-  ];
+  
   return (
     <>
-    <Navbar/>
-    <ImageSlider images={images} />
-    <Home/>
     
-    {/*<div className="container mx-auto px-4">
-      <h1 className="text-2xl font-bold my-4">Main Content</h1>
-      
-  </div>*/}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/terracotta" element={<Productlist />} />
+        <Route path="/tyer" element={<Productlist />} />
+        <Route path="/fabric" element={<Productlist />} />
+        <Route path="/coconut" element={<Productlist />} />
+        <Route path="/bambo" element={<Productlist />} />
+        <Route path="/crok" element={<Productlist />} />
+        <Route path="/copper" element={<Productlist />} />
+        <Route path="/wood" element={<Productlist />} />
+        <Route path="/adout" element={<AboutPage />} />
+        <Route path="/category/:categoryName" component={Productlist} />
+      </Routes>
       <Footer/>
+    </Router>
     </>
   )
 }

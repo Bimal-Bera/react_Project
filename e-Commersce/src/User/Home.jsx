@@ -1,10 +1,19 @@
 import  Display_limit from './Display_limit';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import Navbar from './Navbar';
+import ImageSlider from './ImageSlider';
 
  const Home =() => {
+    const images = [
+        "src/assets/Images/image 9.svg",
+        "src/assets/Images/Elephent.svg",
+        "src/assets/Images/image 23.svg",
+      ];
   return (
     <div>
+    <Navbar/>
+    <ImageSlider images={images} />
     <div className="bg-gray-100 py-8">
       <div className="flex flex-wrap justify-center">
         <div className="bg-gray-300 mb-5 mr-2 rounded-lg w-1/4 mt-2 p-4 text-center">
@@ -27,60 +36,60 @@ import CountUp from 'react-countup';
     <div className="bg-gray-200">
         <div className="flex flex-wrap justify-center">
             <div className="mr-2 mt-3 mb-5 rounded-lg">
-                <a to='/cart'>
+                <Link to='/terracotta'>
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/terracotta-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
                 
-                <a href="">
+                <Link to="/bambo">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/bamboo-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
             </div>
 
             <div className="mr-2 mt-3 mb-5 rounded-lg">
-                <a href="">
+                <Link to="/tyer">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/tyre-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="/crok">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/cork-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
                 
             </div>
 
             <div className="mr-2 mt-3 mb-5 rounded-lg">
-                <a href="">
+                <Link to="/fabric">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/fabric-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="/copper">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/copper-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
             </div>
 
             <div className="mr-2 mt-3 mb-5 rounded-lg">
-                <a href="">
+                <Link to="/coconut">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/coconut-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="/wood">
                     <div className="mr-2 mb-5 rounded-lg">
                         <img src="src/assets/Images/wood-desktop 2.svg" className="w-60 h-100" alt="Display image" />
                     </div>
-                </a>
+                </Link>
             </div>
 
         </div>

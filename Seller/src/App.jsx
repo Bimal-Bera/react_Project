@@ -1,15 +1,23 @@
-
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './SellerComponent/Navbar';
+import Home from './SellerComponent/Home';
+import Login from './SellerComponent/Login';
 
 function App() {
- 
   return (
     <>
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <Router>
+    <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        
+      </Routes>
+    </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
