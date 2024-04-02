@@ -3,7 +3,6 @@ import Footer from './Footer';
 const AboutPage = () => {
   return (
     <>
-    <Navbar/>
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-4xl font-bold mb-8">About Us</h1>
       <div className="relative w-80 h-80 overflow-hidden rounded-lg perspective">

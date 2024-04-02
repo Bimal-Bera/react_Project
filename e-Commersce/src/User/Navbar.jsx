@@ -17,6 +17,8 @@ const Navbar = () => {
               <Link to="/adout" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</Link>
               <Link to="/terracotta" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</Link>
               <Link to="/terracotta" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+              <Link to="/cart" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Cart</Link>
+ 
             </div>
           </div>
           <div className="hidden md:block">
