@@ -5,6 +5,7 @@ import Home from './User/Home'
 import CartPage from './User/CartPage';
 import Footer from './User/Footer';
 import AboutPage from './User/AboutPage';
+import SellerRegistrationForm from './User/SellerRegistrationForm';
 import Navbar from './User/Navbar';
 
 
@@ -28,7 +29,11 @@ function App() {
         
         <Route path="/adout" element={<AboutPage />} />
         <Route path="/category/:categoryName" element={<Productlist/>} />
+<<<<<<< HEAD
         
+=======
+        <Route path="/sellerRegister" element={<SellerRegistrationForm/>}/>
+>>>>>>> himesh
       </Routes>
       <Footer/>
     </Router>
