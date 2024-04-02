@@ -20,7 +20,7 @@ import ImageSlider from './ImageSlider';
       var Wood = 'Wood';
   return (
     <div>
-    <Navbar/>
+    
     <ImageSlider images={images} />
     <div className="bg-gray-100 py-8">
       <div className="flex flex-wrap justify-center">

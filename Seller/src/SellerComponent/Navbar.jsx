@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="" style={{backgroundColor:"#AEBE98"}}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div>
@@ -23,10 +23,10 @@ const Navbar = () => {
             </button>
           </div>
           <div className={`sm:flex flex-col sm:flex-row ${isOpen ? 'block' : 'hidden'}`}>
-            <NavLink to="/products" activeClassName="text-blue-300" className="text-white hover:text-blue-300 py-2 px-4 block">Products</NavLink>
-            <NavLink to="/orders" activeClassName="text-blue-300" className="text-white hover:text-blue-300 py-2 px-4 block">Orders</NavLink>
-            <NavLink to="/profile" activeClassName="text-blue-300" className="text-white hover:text-blue-300 py-2 px-4 block">Profile</NavLink>
-            <NavLink to="/logout" activeClassName="text-blue-300" className="text-white hover:text-blue-300 py-2 px-4 block">Logout</NavLink>
+            <NavLink to="/product" activeClassName="text-blue-300" className="text-white hover:text-blue-700 py-2 px-4 block sm:mx-2">Add Products</NavLink>
+            <NavLink to="/Manageorders" activeClassName="text-blue-300" className="text-white hover:text-blue-700 py-2 px-4 block sm:mx-2">Manage Orders</NavLink>
+            <NavLink to="/ManageProducts" activeClassName="text-blue-300" className="text-white hover:text-blue-700 py-2 px-4 block sm:mx-2">Manage Product</NavLink>
+            <NavLink to="/logout" activeClassName="text-blue-300" className="text-white hover:text-blue-700 py-2 px-4 block sm:mx-2">Logout</NavLink>
           </div>
         </div>
       </div>
