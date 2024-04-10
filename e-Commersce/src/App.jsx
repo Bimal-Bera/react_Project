@@ -29,11 +29,7 @@ function App() {
         
         <Route path="/adout" element={<AboutPage />} />
         <Route path="/category/:categoryName" element={<Productlist/>} />
-<<<<<<< HEAD
-        
-=======
         <Route path="/sellerRegister" element={<SellerRegistrationForm/>}/>
->>>>>>> himesh
       </Routes>
       <Footer/>
     </Router>
