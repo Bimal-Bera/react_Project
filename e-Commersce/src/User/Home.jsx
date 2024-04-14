@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import Navbar from './Navbar';
 import ImageSlider from './ImageSlider';
+import products from '../assets/Product/product';
+import PropTypes from 'prop-types'
+import Productlist from './Productlist';
+import { useEffect, useState } from 'react';
 
- const Home =() => {
+ const Home =({handleClick}) => {
     const images = [
         "src/assets/Images/image 9.svg",
         "src/assets/Images/Elephent.svg",
@@ -18,6 +22,33 @@ import ImageSlider from './ImageSlider';
       var Copper = 'Copper';
       var Coconut = 'Coconut';
       var Wood = 'Wood';
+
+      const [firstEightProducts, setFirstEightProducts] = useState([]);
+
+    useEffect(() => {
+        const uniqueProducts = selectUniqueProducts(8);
+        setFirstEightProducts(uniqueProducts);
+    }, []);
+
+    // Function to select unique random products
+    const selectUniqueProducts = (count) => {
+        const shuffledProducts = products.sort(() => Math.random() - 0.5);
+        const uniqueProducts = [];
+        const productIds = new Set();
+
+        for (const product of shuffledProducts) {
+            if (!productIds.has(product.id)) {
+                uniqueProducts.push(product);
+                productIds.add(product.id);
+            }
+
+            if (uniqueProducts.length === count) break; // Stop when desired count of unique products are found
+        }
+
+        return uniqueProducts;
+    };
+
+
   return (
     <div>
     
@@ -106,9 +137,17 @@ import ImageSlider from './ImageSlider';
 
     <div className="bg-gray-200">
         <div className="flex flex-wrap justify-center">
-            <p className="font-bold">New on Earth Heaven</p>
-
-            <Display_limit/>
+            <p className="font-bold">Product on Earth Heaven</p>
+            <section>
+                {firstEightProducts.map(product => (
+                    <Display_limit key={product.id} product={product} handleClick={handleClick} />
+                ))}
+            </section>
+            <section className="hidden">
+                {products.map(product => (
+                <Productlist key={product.id} product={product} handleClick={handleClick} />
+            ))}
+            </section>
         </div>
     </div>
     <br />
@@ -116,4 +155,8 @@ import ImageSlider from './ImageSlider';
 
   )
 }
+
+Home.propTypes = {
+    handleClick: PropTypes.func.isRequired
+  };
 export default Home;

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = ({size,setshow}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,16 +12,25 @@ const Navbar = () => {
           <div className="flex items-center">
             <span className="text-white font-bold">Logo</span>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:block mt-3">
+            <div className="ml-auto flex items-center space-x-4"> {/* Added ml-auto to push the items to the right */}
               <Link to="/" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-              <Link to="/adout" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</Link>
-              <Link to="/terracotta" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</Link>
-              <Link to="/terracotta" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
-              <Link to="/cart" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Cart</Link>
- 
+              <Link to="/about" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</Link>
+              <Link to="/services" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+              <Link to="/contact" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+              <Link to="/cart-view" className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium relative" onClick={() => setshow(false)}>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 12.57a2 2 0 0 0 1.95 1.43h9.74a2 2 0 0 0 1.95-1.43L23 6H6" stroke="currentColor" strokeWidth="2"></path>
+                  </svg>
+                  <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full text-white px-2 py-1 text-xs">{size}</span>
+                </div>
+              </Link>
             </div>
           </div>
+
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
               <button className="text-gray-300 hover:text-white focus:outline-none">
@@ -51,6 +61,11 @@ const Navbar = () => {
       )}
     </nav>
   );
+  
+};
+Navbar.propTypes = {
+  size: PropTypes.number.isRequired,
+  setshow: PropTypes.func.isRequired
 };
 
 export default Navbar;

@@ -1,13 +1,12 @@
-
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-const ProductPopup = ({ product, onClose, addToCart }) => {
+const ProductPopup = ({ product, onClose,addToCart}) => {
   const navigate = useNavigate(); // Hook for navigation
 
   const handleAddToCart = () => {
-    addToCart(product); // Call the addToCart function passed from the parent component
-    navigate('/cart'); // Navigate to the cart page
+    addToCart(product); // Assuming addToCart function adds the product to the cart state
+    navigate(`/cart?productId=${product.id}`); // Navigate to cart page with product ID as URL parameter
   };
 
   return (
@@ -28,7 +27,7 @@ const ProductPopup = ({ product, onClose, addToCart }) => {
           <span className="text-gray-600">Price: ₹{product.price}</span>
           
           {/* Add to Cart button */}
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={handleAddToCart}>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={()=>handleAddToCart()}>
             Add to Cart
           </button>
         </div>
@@ -41,6 +40,7 @@ ProductPopup.propTypes = {
   product: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   addToCart: PropTypes.func.isRequired, // Function to add the product to the cart
+  handleProductClick: PropTypes.func, // Optional prop for handling product click
 };
 
 export default ProductPopup;
