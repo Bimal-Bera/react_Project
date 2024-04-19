@@ -8,7 +8,7 @@
   import SellerRegistrationForm from './User/SellerRegistrationForm';
   import Navbar from './User/Navbar';
   import { useState } from 'react';
-
+  import AddressPage from './User/AddressPage';
   import Cart from './User/Cart';
   import products from './assets/Product/product';
 
@@ -64,6 +64,7 @@
           <Route path="/sellerRegister" element={<SellerRegistrationForm/>}/>
           
           <Route path="/cart-view" element={<Cart cart={cart} setCart={setCart} />} />
+          <Route path="/address" element={<AddressPage/>}/>
         </Routes>
         <Footer/>
       </Router>

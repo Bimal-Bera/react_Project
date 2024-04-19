@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import ProductData from '../assets/Product/product';
 
 const UpdateProductForm = () => {
+  const { productId } = useParams(); // Fetch productId from URL params
   const [product, setProduct] = useState({
-    name: '',
+    title: '',
     description: '',
     price: '',
     quantity: '',
@@ -10,8 +13,32 @@ const UpdateProductForm = () => {
     brand: '',
     image: null,
   });
-
   const [imagePreview, setImagePreview] = useState(null);
+
+  useEffect(() => {
+    // Function to fetch product details by ID
+    const fetchProductById = async () => {
+      // Find the product in the product data array by ID
+      const selectedProduct = ProductData.find(product => product.id === productId);
+      if (selectedProduct) {
+        // Set product details
+        setProduct(selectedProduct);
+        // Fetch image file if available
+        if (selectedProduct.image) {
+          try {
+            const response = await fetch(selectedProduct.image); // Assuming image is a URL
+            const blob = await response.blob();
+            setProduct({ ...product, image: blob });
+            setImagePreview(URL.createObjectURL(blob));
+          } catch (error) {
+            console.error('Error fetching image:', error);
+          }
+        }
+      }
+    };
+
+    fetchProductById();
+  }, [productId]); // Fetch product data whenever productId changes
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -45,10 +72,9 @@ const UpdateProductForm = () => {
     <div className="container mx-auto mt-8">
       <h1 className="text-3xl font-bold mb-4">Update Product</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        {/* Other form fields */}
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700">Product Name</label>
-          <input type="text" id="name" name="name" value={product.name} onChange={handleChange} className="mt-1 p-2 w-full border rounded-md" />
+          <input type="text" id="name" name="title" value={product.title} onChange={handleChange} className="mt-1 p-2 w-full border rounded-md" />
         </div>
         <div className="mb-4">
           <label htmlFor="description" className="block text-gray-700">Description</label>
@@ -74,6 +100,7 @@ const UpdateProductForm = () => {
         <div className="mb-4">
           <label htmlFor="image" className="block text-gray-700">Product Image</label>
           <input type="file" id="image" name="image" accept="image/*" onChange={handleImageChange} className="mt-1 p-2 w-full border rounded-md" />
+          <img src={product.banner} alt="Product" className="max-w-xs mx-auto" />
         </div>
         {/* Display image preview if available */}
         {imagePreview && (
@@ -82,7 +109,9 @@ const UpdateProductForm = () => {
           </div>
         )}
         
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update Product</button>
+        <div className="flex justify-center">
+          <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update Product</button>
+        </div>
       </form>
     </div>
   );
