@@ -64,11 +64,11 @@ const Productlist = ({handleClick}) => {
             <div className="px-6 py-4">
               <div className="font-bold mb-2">{product.title}</div>
               <div className="flex items-center">
-                <img src="../assets/Images/Cloud.svg" alt="icon" className="w-6 h-6 mr-2" />
+                <img src="../src/assets/Images/Cloud.svg" alt="icon" className="w-6 h-6 mr-2" />
                 <p style={{ color: "black" }} className="text-sm">17% less carbon emissions</p>
               </div>
               <div className="flex items-center">
-                <img src="src/assets/Images/Buttol.svg" alt="icon" className="w-6 h-6 mr-2" />
+                <img src="../src/assets/Images/Buttol.svg" alt="icon" className="w-6 h-6 mr-2" />
                 <p style={{ color: "black" }} className="text-sm">86% less plastic pollution</p>
               </div>
               <p style={{ color: "black" }} className="text-sm text-left"><b>₹ {product.price}</b></p>

@@ -7,24 +7,24 @@ const AddressPage = () => {
 
   const [formData, setFormData] = useState({
     fullName: '',
-    addressLine1: '',
-    addressLine2: '',
+    mobileNo: '',
+    address: '',
     city: '',
     state: '',
     zipCode: '',
     country: '',
   });
 
-  useEffect(() => {
-    if (!sellerIds) return;
-    // Initialize orders for the current seller if not already present
-    if (!orders[sellerIds]) {
-      setOrders(prevOrders => ({
-        ...prevOrders,
-        [sellerIds]: [],
-      }));
-    }
-  }, [sellerIds, orders]);
+  // useEffect(() => {
+  //   if (!sellerIds) return;
+  //   // Initialize orders for the current seller if not already present
+  //   if (!orders[sellerIds]) {
+  //     setOrders(prevOrders => ({
+  //       ...prevOrders,
+  //       [sellerIds]: [],
+  //     }));
+  //   }
+  // }, [sellerIds, orders]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,21 +44,21 @@ const AddressPage = () => {
     const orderId = generateOrderId();
     const order = {
       orderId,
-      sellerId: sellerIds, // Adding sellerId to the order object
+      //sellerId: sellerIds, // Adding sellerId to the order object
       ...formData,
     };
 
     // Add the order to the orders list for the current seller
-    setOrders(prevOrders => ({
-      ...prevOrders,
-      [sellerIds]: [...prevOrders[sellerIds], order],
-    }));
+    // setOrders(prevOrders => ({
+    //   ...prevOrders,
+    //   [sellerIds]: [...prevOrders[sellerIds], order],
+    // }));
 
     // Reset the form data
     setFormData({
       fullName: '',
-      addressLine1: '',
-      addressLine2: '',
+      mobileNo: '',
+      address: '',
       city: '',
       state: '',
       zipCode: '',
@@ -78,12 +78,12 @@ const AddressPage = () => {
           <input type="text" id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
         </div>
         <div className="mb-4">
-          <label htmlFor="addressLine1" className="block text-gray-700 font-bold mb-2 text-left">Address Line 1</label>
-          <input type="text" id="addressLine1" name="addressLine1" value={formData.addressLine1} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
+          <label htmlFor="mobileNo" className="block text-gray-700 font-bold mb-2 text-left">Mobile No</label>
+          <input type="text" id="mobileNo" name="mobileNo" value={formData.mobileNo} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
         </div>
         <div className="mb-4">
-          <label htmlFor="addressLine2" className="block text-gray-700 font-bold mb-2 text-left">Address Line 2</label>
-          <input type="text" id="addressLine2" name="addressLine2" value={formData.addressLine2} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+          <label htmlFor="address" className="block text-gray-700 font-bold mb-2 text-left">Address</label>
+          <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div className="mb-4">
           <label htmlFor="city" className="block text-gray-700 font-bold mb-2 text-left">City</label>

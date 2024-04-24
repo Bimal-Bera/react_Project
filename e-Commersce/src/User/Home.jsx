@@ -139,9 +139,9 @@ import { useEffect, useState } from 'react';
         <div className="flex flex-wrap justify-center">
             <p className="font-bold">Product on Earth Heaven</p>
             <section>
-                {firstEightProducts.map(product => (
-                    <Display_limit key={product.id} product={product} handleClick={handleClick} />
-                ))}
+                <Display_limit product={firstEightProducts} handleClick={handleClick} />
+                {/* {firstEightProducts.map(product => (
+                ))} */}
             </section>
             <section className="hidden">
                 {products.map(product => (
