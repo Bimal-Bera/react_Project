@@ -73,6 +73,7 @@ const Cart = ({ cart, setCart }) => {
                                 <tr key={item.id}>
                                     <td className="border px-4 py-2">
                                         <img src={item.banner} alt={item.title} className="h-16 w-16 object-cover" />
+                                        
                                     </td>
                                     <td className="border px-4 py-2">
                                         <button className="px-2 py-1 bg-gray-200 rounded-md" onClick={() => handleCountChange(item.id, +1)}>+</button>

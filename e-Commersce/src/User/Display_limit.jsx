@@ -25,7 +25,7 @@ const Display_limit = ({product, handleClick}) => {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {limitedProducts.map((product, index) => (
+      {limitedProducts.map((products, index) => (
         <div key={index} className={`max-w-sm rounded overflow-hidden shadow-lg cursor-pointer ${cart.includes(product) ? 'bg-white' : ''}`} onClick={() => handleProductClick(product)}>
           <img src={product.banner} alt={product.title} className="w-full" />
           <div className="px-6 py-4">
