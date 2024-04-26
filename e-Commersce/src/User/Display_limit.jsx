@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import products from '../assets/Product/product';
-import ProductPopup from './ProductPopup';
 import PropTypes from 'prop-types';
-const Display_limit = ({product, handleClick}) => {
-  const { title, description, banner, price } = product;
+import ProductPopup from './ProductPopup';
+import products from '../assets/Product/product'
+
+const Display_limit = ({ product, handleClick }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [cart, setCart] = useState([]);
 
@@ -19,15 +19,11 @@ const Display_limit = ({product, handleClick}) => {
     setSelectedProduct(null);
   };
 
-  // {selectedProduct && (
-  //   <ProductPopup product={selectedProduct} onClose={handleClosePopup} />
-  // )}
-
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {limitedProducts.map((products, index) => (
-        <div key={index} className={`max-w-sm rounded overflow-hidden shadow-lg cursor-pointer ${cart.includes(product) ? 'bg-white' : ''}`} onClick={() => handleProductClick(product)}>
-          <img src={product.banner} alt={product.title} className="w-full" />
+      {limitedProducts.map((product, index) => (
+        <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg cursor-pointer">
+          <img src={product.banner} alt={product.title} className="w-full"  onClick={() => handleProductClick(product)} />
           <div className="px-6 py-4">
             <div className="font-bold mb-2">{product.title}</div>
             <div className="flex items-center">
@@ -40,15 +36,21 @@ const Display_limit = ({product, handleClick}) => {
             </div>
             <p className="text-sm text-left"><b>₹ {product.price}</b></p>
             <button 
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => handleClick(product)}
-      >
-        Add to Cart
-      </button>
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={() => handleClick(product)}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       ))}
-      
+      {selectedProduct && (
+        <ProductPopup
+          product={selectedProduct}
+          onClose={handleClosePopup}
+          handleClick={handleClick}
+        />
+      )}
     </div>
   );
 };
@@ -62,4 +64,5 @@ Display_limit.propTypes = {
   }).isRequired,
   handleClick: PropTypes.func.isRequired,
 };
+
 export default Display_limit;

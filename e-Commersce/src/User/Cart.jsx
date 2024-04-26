@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ cart, setCart }) => {
+    const navigate = useNavigate();
     const [price, setPrice] = useState(0);
     const [counts, setCounts] = useState({}); // State to store counts for each item
+    
 
     // Function to increment or decrement the count for a specific item
     const handleCountChange = (id, delta) => {
@@ -49,8 +52,23 @@ const Cart = ({ cart, setCart }) => {
 
     // Function to handle proceeding to checkout or some other action
     const handleProceed = () => {
-        // Add your logic here for proceeding to checkout
-        console.log("Proceed to checkout!");
+        // Extracting only the IDs from the cart array
+        const cartIds = cart.map(item => item.sellerId);
+        
+        const cartIdsString = cartIds; // Joining IDs into a comma-separated string
+
+        const cartIdsEncoded = encodeURIComponent(cartIdsString); // Encoding the string for URL
+        
+        // Decode the encoded string
+        const decodedString = decodeURIComponent(cartIdsEncoded);
+
+        // Split the decoded string into an array using commas as the delimiter
+        const sellerIdsArray = decodedString.split(',');
+
+        console.log(sellerIdsArray);
+        // Constructing the URL with cart IDs as a query parameter
+        navigate(`/address?sellerIds=${sellerIdsArray}`);
+        
     };
 
     return (

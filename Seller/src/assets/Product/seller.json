@@ -1,0 +1,58 @@
+[
+    {
+        "SellerId": 1,
+        "sellername": "John Doe",
+        "selleremail": "johndoe@gmail.com",
+        "mobile": 9574497299,
+        "adharno": "123465494987",
+        "password": "password123"
+    },
+    {
+        "SellerId": 2,
+        "sellername": "Jane Smith",
+        "selleremail": "janesmith@example.com",
+        "mobile": 9574497300,
+        "adharno": "987654321012",
+        "password": "secret123"
+    },
+    {
+        "SellerId": 3,
+        "sellername": "Alice Johnson",
+        "selleremail": "alicejohnson@example.com",
+        "mobile": 9574497301,
+        "adharno": "456789123456",
+        "password": "securepassword"
+    },
+    {
+        "SellerId": 4,
+        "sellername": "Bob Anderson",
+        "selleremail": "bobanderson@example.com",
+        "mobile": 9574497302,
+        "adharno": "789456123789",
+        "password": "password456"
+    },
+    {
+        "SellerId": 5,
+        "sellername": "Emily Brown",
+        "selleremail": "emilybrown@example.com",
+        "mobile": 9574497303,
+        "adharno": "321654987654",
+        "password": "emilypassword"
+    },
+    {
+        "SellerId": 6,
+        "sellername": "Michael Wilson",
+        "selleremail": "michaelwilson@example.com",
+        "mobile": 9574497304,
+        "adharno": "654987321654",
+        "password": "michaelpass"
+    },
+    {
+        "SellerId": 7,
+        "sellername": "Emma Davis",
+        "selleremail": "emmadavis@example.com",
+        "mobile": 9574497305,
+        "adharno": "789123456321",
+        "password": "emmapassword"
+    }
+]

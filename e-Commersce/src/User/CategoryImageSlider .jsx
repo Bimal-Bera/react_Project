@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import category from '../assets/Product/Category_Image.js';
+import category from '../assets/Product/Category_Image';
 
 const CategoryImageSlider = () => {
   return (

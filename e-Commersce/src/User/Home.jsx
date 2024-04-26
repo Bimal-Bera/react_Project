@@ -139,7 +139,7 @@ import { useEffect, useState } from 'react';
         <div className="flex flex-wrap justify-center">
             <p className="font-bold">Product on Earth Heaven</p>
             <section>
-                <Display_limit key={product.id} product={firstEightProducts} handleClick={handleClick} />
+                <Display_limit product={firstEightProducts} handleClick={handleClick} />
                 {/* {firstEightProducts.map(product => (
                 ))} */}
             </section>

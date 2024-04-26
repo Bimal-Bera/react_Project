@@ -98,11 +98,7 @@ export const products = [
         category: 'Fabric',
         description: 'Diseño delgado y ergonómico: el teclado delgado tiene un ángulo de inclinación para una gran posición de escritura. Ratón inalámbrico resistente al sudor, agradable al tacto en forma contorneada que proporcionará horas de trabajo cómodamente. El teclado de tamaño completo es rápido con teclado numérico y acceso instantáneo a tu música, Internet, correo electrónico, volumen, etc. mediante teclas multimedia. (Las teclas de acceso rápido no son totalmente compatibles con el sistema Mac). Menos ruido y tecla de perfil. Funcionamiento rápido 2.4G inalámbrico Plug and Play: simplemente conecta tanto tu teclado portátil como tu mouse con un receptor USB (el nano receptor simplemente coloca el mouse cerca del compartimento de la batería). Alta precisión: mouse inalámbrico DPI 1600 en 3 niveles: puedes cambiar fácilmente la sensibilidad del cursor de este mouse inalámbrico dependiendo de tus actividades.',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1683660860/Productos%20Amazonas/a1_g0krew.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683660861/Productos%20Amazonas/a2_rp9rqc.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683660860/Productos%20Amazonas/a3_zix2ye.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/c/h/cham001_bi.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/m/l/mli_be_002a_bi.webp',
->>>>>>> main
         brand: 'Cimetech',
         rate: 2,
         quantity: 11
@@ -167,11 +163,7 @@ export const products = [
         category: 'Copper',
         description: 'Extraordinario sonido HD de 360° + opción para conectar dos altavoces: cada uno de nuestros altavoces portátiles TWS Bluetooth viene con 25 W de sonido HD nítido de 360° y subwoofers dobles DualBass, para una experiencia auditiva inigualable. Si eso no es suficiente, puedes conectar dos altavoces inalámbricos juntos para un verdadero sonido envolvente de alta definición que te volará. Hecho para deportes al aire libre y aventuras: no te dejes engañar por el hermoso aspecto y los LED ambientales geniales de este altavoz Bluetooth impermeable. Está hecho muy resistente para todos tus deportes al aire libre, senderismo, camping y activarse. Ahora toma tus altavoces impermeables HD77, ponte tus canciones favoritas y diviértete al aire libre con tu familia y amigos Lluvia o nieve, It is A Go - HD77 es un altavoz inalámbrico valiente y fuerte. No tiene miedo a la humedad o al amor duro. Es un altavoz impermeable a prueba de golpes e inalámbrico IPX6, por lo que le encanta cantar bajo la lluvia y no importa que se caiga, patee o rebote. Encendido todo el día con una sola carga, siéntete libre Deja el cargador en casa y ve a jugar Como HD77 no juega juegos con la tecnología de ahorro de energía PlayXTend y batería de alta capacidad de 5200 mAh para que puedas jugar hasta 20 horas de volumen medio por carga. Características futuristas: 1. Micrófono integrado para llamadas. 2. Los LED ambientales fríos y profundos establecen el estado de ánimo. 3. Fácil configuración en segundos a través de Bluetooth con tu dispositivo iOS, Android o Windows. 4. Las luces indicadoras intuitivas te ayudan a conectar fácilmente. 5. Rango de señal de 33 pies para que puedas vagar con tu teléfono todavía en tu bolsillo. 6. Correa de mano y mosquetón para colgar el altavoz inalámbrico Bluetooth en tu mochila.',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1683662550/Productos%20Amazonas/a1_lfrxyy.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683662550/Productos%20Amazonas/a2_b60av2.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683662550/Productos%20Amazonas/a3_canzau.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/o/b/ob_020_bi.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/c/o/copperbangle69_bi.webp',
->>>>>>> main
         brand: 'TREBLAB',
         rate: 2,
         quantity: 26
@@ -184,11 +176,7 @@ export const products = [
         category: 'Copper',
         description: 'Juega, transmite y disfruta de tus programas favoritos, trabaja en tu juego y mantén tu lista de reproducción explosiva con la batería de larga duración del Galaxy A52 5G-Cuando necesites un impulso de energía, la carga súper rápida te hará copiar de seguridad en poco tiempo. Dual-SIM. Tamaño SIM Nano-SIM (4FF)-Trabaja rápido, juega duro: entra en el flujo y permanece ahí con Galaxy A52 5G-Con un procesador rápido y fiable más conectividad 5G en tu bolsillo, decides cuáles son tus límites o no',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642289373/Productos%20Amazonas/fgcsxgeafvyi4roiflcd.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642289386/Productos%20Amazonas/wbn3brpd3pkafjc3i0be.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642289396/Productos%20Amazonas/ugxocajisya1ri8penkc.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/o/b/ob_014_bi.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/o/b/ob_020_bi.webp',
->>>>>>> main
         brand: 'Samsung',
         rate: 5,
         quantity: 28
@@ -201,11 +189,7 @@ export const products = [
         category: 'Copper',
         description: 'Pantalla IPS de 7 pulgadas; 16 o 32 GB de memoria interna (añade hasta 512 GB con la tarjeta microSD).Procesador de 1.3 GHz de cuatro núcleos más veloz.Hasta 7 horas de lectura, navegación en Internet, reproducción de videos y música.Ahora con Alexa manos libres.1 GB de RAM.Cámaras frontales y traseras de 2 MP con grabación de video HD de 720p.Mantén el rumbo - Revisa el correo electrónico, haz videollamadas, actualiza listas de compras y establece recordatorios. Usa tus aplicaciones favoritas, como Zoom, Outlook y OneNote',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642382155/Productos%20Amazonas/jqght8igwi9vqug2xkr6.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642382165/Productos%20Amazonas/qxo8krcoefivto905zpw.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642382170/Productos%20Amazonas/n0ctgpdfeohrepndaoau.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/t/r/truy1574_bi.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/o/b/ob_015_bi.webp',
->>>>>>> main
         brand: 'Amazon',
         rate: 4,
         quantity: 20
@@ -336,11 +320,7 @@ export const products = [
         category: 'Fabric',
         description: 'Mesa Android de alto rendimiento: la tableta Pritom Tronpad viene con el último Android 10.0, el potente y de bajo consumo procesador Quad-core de 32 bits 1. 5 GHz, 2 GB de RAM, permite un lanzamiento más rápido de las aplicaciones, videos más suaves y un mejor rendimiento general. Además, incluye una ranura para tarjeta micro SD (se puede añadir una tarjeta SD máxima de 128 GB, no incluida), no más preocupaciones por el espacio de almacenamiento, por lo que es fácil almacenar videos, etc.Android 10.0: batería de polímero de litio de 5000 mAh y CPU de baja potencia mejoran tu experiencia y te permiten disfrutar de hasta 6 horas de lectura mixta, ver programas de televisión, navegar por la web, jugar juegos ligeros y mucho más. Es un gran compañero para tiImpresionante pantalla IPS: la tablet de 10 pulgadas adopta una pantalla IPS de 1280 x 800, que presenta una jerarquía más nítida de imágenes y colores más ricos para una experiencia de visualización más realista desde todos los ángulos. Lee cómodamente por la noche con salud ocular, una característica adicional que se ajusta automáticamente y optimiza la retroiluminación para una experiencia de lectura nocturna más cómoda.32 GB ROM con memoria ampliable: la tablet ofrece 32 GB de memoria integrada e incluye una ranura para tarjeta microSD (la tarjeta microSD se vende por separado) que te permite añadir hasta 128 GB adicionales de memoria, mantener todos tus medios favoritos contigo dondequiera que vayas, como libros electrónicos, canciones, videos, fotos, música, etc.Tablet equipada con pantalla táctil HD IPS de 1280 x 800 píxeles. La pantalla IPS puede mostrar imágenes claras y estables y ayudarte a no sentir fatiga ocular después de usar la tablet durante mucho tiempo. El cuerpo ligero es adecuado para llevar.',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642382304/Productos%20Amazonas/ryzv4rwo28hp9hdghjln.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642382308/Productos%20Amazonas/olhp4hdgt0r5zxt9nrna.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642382314/Productos%20Amazonas/yboiiyz99ozvd2cse7an.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/b/r/brt001_bi.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/s/a/sadam002_bi.webp',
->>>>>>> main
         brand: 'PRITOM',
         rate: 4,
         quantity: 15
@@ -523,11 +503,7 @@ export const products = [
         category: 'Fabric',
         description: 'Celular con capacidad de 20G. Cámara de alta resolución. Este teléfono está desbloqueado y es compatible con cualquier operador de redes GSM y CDMA (por ejemplo AT&T, T-Mobile, Sprint, Verizon, US Cellular, Cricket, Metro, Tracfone, Mint Mobile, etc.). Se ha comprobado la salud de la batería y se garantiza que viene con una batería que supera el 90 % de la capacidad original. Incluye un cable de carga genérico nuevo con certificación Mfi (fabricado para iPhone) y un enchufe de pared genérico nuevo con certificación UL para un mayor rendimiento y seguridad. También incluye una herramienta de extracción de la bandeja SIM, pero no viene con auriculares ni tarjeta SIM. Se ha inspeccionado y se ha garantizado que tiene un daño cosmético mínimo, que no es perceptible cuando se sostiene el dispositivo a la distancia del brazo. Ha superado con éxito una prueba de diagnóstico completa que garantiza un funcionamiento como nuevo y la eliminación de cualquier información personal del usuario anterior.',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642786067/Productos%20Amazonas/wyaquvurg9t1zxkjzkse.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642786075/Productos%20Amazonas/zaaj2eng7dycgaoqqpcc.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642786082/Productos%20Amazonas/gitqxcjjsmwuoptnfohl.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/p/a/padm001_bi.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/m/l/mli_be_001a_bi.webp',
->>>>>>> main
         brand: 'XYT',
         rate: 1,
         quantity: 2
@@ -657,11 +633,7 @@ export const products = [
         category: 'Copper',
         description: 'Fácil de limpiar: piel de PVC duradera para la parte superior de uso, solo tienes que utilizar un paño para limpiarlo, muy fácil de limpiar, un paño húmedo sería preferible si hay demasiada suciedad en la alfombrilla. Uso de superficie amplia: tamaño de 31.5 x 15.7 in, lo suficientemente grande como para adaptarse a tu portátil, ratón y teclado. Protege tu escritorio: resistente al agua, a prueba de aceite, protege tu escritorio de vidrio/madera de arañazos, manchas y derrames. Elección de diversidad: ofrecemos diferentes colores y tamaños, que son adecuados para diferentes lugares de oficina. Siempre hay uno para ti. Sin necesidad de alfombrilla de ratón: sin olor desagradable, piel sintética de buen gusto añade elegancia a tu espacio de trabajo. La superficie se puede utilizar como una alfombrilla de ratón, cómoda superficie de descanso para tus manos mientras escribes, escribes y usas el ratón.',
         images: ['https://res.cloudinary.com/silviajcn/image/upload/v1683659245/Productos%20Amazonas/au1_lqtf2k.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683659245/Productos%20Amazonas/au2_wtmgat.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683659245/Productos%20Amazonas/au3_pwxtjb.jpg'],
-<<<<<<< HEAD
-        banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/t/r/truy1571_a1.webp',
-=======
         banner: 'https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/t/r/truy1574_bi.webp',
->>>>>>> main
         brand: 'YSAGi',
         rate: 5,
         quantity: 39
