@@ -30,10 +30,10 @@ const Navbar = ({ size, setshow }) => {
                 About
               </Link>
               <Link
-                to="/sellerRegister"
+                to="/contact"
                 className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Seller Reg
+                Contact us
               </Link>
 
               {/*handel Login and user icon*/}

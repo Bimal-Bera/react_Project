@@ -9,6 +9,11 @@ const UserProfilePage = () => {
     navigate('/order-history');
   };
 
+  const handleSellerRegistrationClick =() =>{
+    // Navigate to the seller registration page
+    navigate('/sellerRegister');
+  }
+
   const handleLogoutClick = () => {
     // Implement logout functionality (e.g., clear session, redirect to login page)
     // For demonstration purposes, we'll just navigate to the login page
@@ -25,6 +30,14 @@ const UserProfilePage = () => {
         >
           Order History
         </button>
+
+        <button
+          onClick={handleSellerRegistrationClick}
+          className="py-2 px-4 rounded-md text-gray-800 hover:bg-gray-300 hover:text-gray-900 mb-4 w-full"
+        >
+          Seller Registration
+        </button>
+
         <button
           onClick={handleLogoutClick}
           className="py-2 px-4 rounded-md text-gray-800 hover:bg-gray-300 hover:text-gray-900 w-full"

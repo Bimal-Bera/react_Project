@@ -16,7 +16,7 @@
   import ProductPopup from './User/ProductPopup';
   import UserProfilePage from './User/UserProfilePage';
   import OrderPage from './User/OrderHistory';
-
+  import ContactPage from './User/ContactPage';
 
   function App() {  
     const [show,setShow] = useState(true);
@@ -64,6 +64,7 @@
           <Route path="/ProductPopUp" element={<ProductPopup handleClick={handleClick}/>}/>
           <Route path="/Myprofile" element={<UserProfilePage/>}/>
           <Route path="/order-history" element={<OrderPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
         </Routes>
         <Footer/>
       </Router>
