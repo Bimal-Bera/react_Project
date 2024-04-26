@@ -11,10 +11,14 @@
   import AddressPage from './User/AddressPage';
   import Cart from './User/Cart';
   import products from './assets/Product/product';
+  import RegistrationForm from './User/RegistrationForm';
+  import LoginForm from './User/LoginForm';
+  import ProductPopup from './User/ProductPopup';
+  import UserProfilePage from './User/UserProfilePage';
+  import OrderPage from './User/OrderHistory';
 
-  function App() {
-    
 
+  function App() {  
     const [show,setShow] = useState(true);
     const [cart,setCart] =useState([]);
     const [warning,setWarning] = useState(false);
@@ -39,32 +43,27 @@
 
     return (
       <>
-        <Router>
+      <Router>
       <Navbar size={cart.length} setshow={setShow}/>
       {
         warning && (
           <div className="fixed top-0 right-0 mt-4 mr-4 p-4 rounded-lg shadow-lg text-white bg-red-500">
-          Item already in your cart...
-      </div>
+            Item already in your cart...
+          </div>
         )
-    }
+      }
         <Routes>
           <Route path="/" element={<Home handleClick={handleClick}/>} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}  />} />
-        
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/category/:categoryName" element={<Productlist/>} />
+          <Route path="/category/:categoryName" element={<Productlist handleClick={handleClick}/>} />
           <Route path="/sellerRegister" element={<SellerRegistrationForm/>}/>
-          
+          <Route path="/Register" element={<RegistrationForm/>}/>
           <Route path="/cart-view" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="/address" element={<AddressPage/>}/>
+          <Route path="/Login" element={<LoginForm/>}/>
+          <Route path="/ProductPopUp" element={<ProductPopup handleClick={handleClick}/>}/>
+          <Route path="/Myprofile" element={<UserProfilePage/>}/>
+          <Route path="/order-history" element={<OrderPage/>}/>
         </Routes>
         <Footer/>
       </Router>

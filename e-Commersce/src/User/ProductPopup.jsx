@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-const ProductPopup = ({ product, onClose,addToCart}) => {
+const ProductPopup = ({ product, onClose, handleClick }) => {
   const navigate = useNavigate(); // Hook for navigation
 
+  // Function to handle adding product to cart and closing the popup
   const handleAddToCart = () => {
-    addToCart(product); // Assuming addToCart function adds the product to the cart state
-    navigate(`/cart?productId=${product.id}`); // Navigate to cart page with product ID as URL parameter
+    handleClick(product); // Call the handleClick function to add product to cart
+    onClose(); // Close the popup
   };
 
   return (
@@ -27,7 +28,10 @@ const ProductPopup = ({ product, onClose,addToCart}) => {
           <span className="text-gray-600">Price: ₹{product.price}</span>
           
           {/* Add to Cart button */}
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={()=>handleAddToCart()}>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={handleAddToCart} // Call handleAddToCart function on click
+          >
             Add to Cart
           </button>
         </div>
@@ -39,8 +43,7 @@ const ProductPopup = ({ product, onClose,addToCart}) => {
 ProductPopup.propTypes = {
   product: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
-  addToCart: PropTypes.func.isRequired, // Function to add the product to the cart
-  handleProductClick: PropTypes.func, // Optional prop for handling product click
+  handleClick: PropTypes.func.isRequired, // Function to handle adding product to cart
 };
 
 export default ProductPopup;

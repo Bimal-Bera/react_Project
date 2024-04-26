@@ -4,6 +4,8 @@ const SellerRegistrationForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    mobile:'',
+    adharno:'',
     password: '',
     confirmPassword: '',
     location: '',
@@ -33,6 +35,14 @@ const SellerRegistrationForm = () => {
           <div className="mb-4">
             <label htmlFor="email" className="block text-left text-sm font-semibold mb-2">Email</label>
             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-indigo-500" required />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="mobile" className="block text-left text-sm font-semibold mb-2">Mobile No</label>
+            <input type="text" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-indigo-500" required />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="adharno" className="block text-left text-sm font-semibold mb-2">Adhar No</label>
+            <input type="text" id="adharno" name="adharno" value={formData.adharno} onChange={handleChange} className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-indigo-500" required />
           </div>
           <div className="mb-4">
             <label htmlFor="password" className="block text-left text-sm font-semibold mb-2">Password</label>

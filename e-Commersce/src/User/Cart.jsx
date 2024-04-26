@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ cart, setCart }) => {
+    const navigate = useNavigate();
     const [price, setPrice] = useState(0);
     const [counts, setCounts] = useState({}); // State to store counts for each item
     
@@ -66,7 +67,7 @@ const Cart = ({ cart, setCart }) => {
 
         console.log(sellerIdsArray);
         // Constructing the URL with cart IDs as a query parameter
-        window.location.href = `/address?sellerIds=${sellerIdsArray}`;
+        navigate(`/address?sellerIds=${sellerIdsArray}`);
         
     };
 
